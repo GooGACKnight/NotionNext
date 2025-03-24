@@ -1,4 +1,14 @@
 {
+  // 启用“干净的 URL”模式，将 URL 中的 .html 后缀去掉
+  "cleanUrls": true,
+
+  // 禁用 URL 尾部的斜杠
+  "trailingSlash": false,
+
+  // 定义全局或特定路径的 HTTP 响应头，当前为空
+  "headers": []
+}
+{
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": []
