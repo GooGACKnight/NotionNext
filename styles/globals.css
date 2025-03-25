@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 禁止水平滚动条 */
 html {
   overflow-x: hidden;
 }
 
-/* 页面包装器样式，确保内容至少占据整个视口高度 */
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -17,7 +15,6 @@ html {
   flex-direction: column;
 }
 
-/* 导航栏样式，使用粘性定位和模糊背景效果 */
 .sticky-nav {
   position: sticky;
   z-index: 10;
@@ -28,52 +25,41 @@ html {
   border-bottom-color: transparent;
 }
 
-/* 完整显示的导航栏样式，包括边框和颜色 */
 .sticky-nav-full {
   @apply border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
 }
 
-/* 导航栏中的标题样式，隐藏溢出文本 */
 .header-name {
   overflow: hidden;
 }
 
-/* 导航栏中链接的样式，根据主题变化颜色 */
 .sticky-nav-full .nav {
   @apply text-gray-600 dark:text-gray-300;
 }
 
-/* 导航栏布局样式，允许换行和设置行高 */
 nav {
   flex-wrap: wrap;
   line-height: 1.5em;
 }
 
-/* 隐藏文章标签和标签容器的滚动条 */
-.article-tags::-webkit-scrollbar,
+.article-tags::-webkit-scrollbar {
+  width: 0 !important;
+}
+
 .tag-container ul::-webkit-scrollbar {
   width: 0 !important;
 }
 
-/* 移除 .tag-container 内部的 ul 元素的滚动条样式，并禁止文本选择 */
 .tag-container ul {
-  /* 移除 IE 浏览器下的滚动条 */
   -ms-overflow-style: none;
-  /* 移除 Firefox 浏览器下的滚动条 */
   overflow: -moz-scrollbars-none;
-  /* 禁止 IE 浏览器中的文本选择 */
-  -ms-user-select: none;
-  /* 禁止 Firefox 浏览器中的文本选择 */
   -moz-user-select: none;
-  /* 禁止 Chrome、Safari 等浏览器中的文本选择 */
   -webkit-user-select: none;
-  /* 禁止 KHTML 浏览器中的文本选择 */
+  -ms-user-select: none;
   -khtml-user-select: none;
-  /* 禁止所有浏览器中的文本选择 */
   user-select: none;
 }
 
-/* 响应式设计，调整导航栏和标题的样式 */
 @media (min-width: 768px) {
   .sticky-nav-full {
     @apply max-w-full border-b border-opacity-50 border-gray-200 dark:border-gray-600 dark:border-opacity-50;
@@ -87,7 +73,6 @@ nav {
   }
 }
 
-/* 当不支持 backdrop-filter 时的回退样式 */
 @supports not (backdrop-filter: none) {
   .sticky-nav {
     -webkit-backdrop-filter: none;
@@ -96,7 +81,6 @@ nav {
   }
 }
 
-/* 卡片阴影样式 */
 .shadow-card {
   box-shadow:
     rgba(0, 0, 0, 0.07) 0px 1px 2px,
@@ -107,17 +91,15 @@ nav {
     rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-/* 元数据样式，根据主题变化颜色 */
 .gt-meta {
   @apply dark:text-gray-300;
 }
 
-/* 腰部图像样式，设置位置和隐藏状态 */
 #waifu {
   @apply right-auto left-0 hidden lg:block z-10 !important;
 }
 
-/* 隐藏滚动条的样式 */
+/* 隐藏滚动条 */
 .scroll-hidden {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
@@ -128,30 +110,25 @@ nav {
   width: 0 !important;
 }
 
-/* 气泡效果样式 */
 .glassmorphism {
   background: hsla(0, 0%, 100%, 0.05);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
-/* 调整图片加载遮罩样式 */
 .medium-zoom-overlay {
   background: none !important;
   /* background: rgba(0, 0, 0, 0.01) none repeat scroll 0% 0% !important; */
 }
 
-/* 文本阴影样式 */
 .shadow-text {
   text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-/* 禁止代码按钮的指针事件 */
 .notion-code-copy-button > svg {
   pointer-events: none;
 }
 
-/* 烟花样式，设置位置和隐藏状态 */
 .fireworks {
   position: fixed;
   left: 0;
@@ -160,13 +137,11 @@ nav {
   pointer-events: none;
 }
 
-/* Waline 评论样式，调整文本颜色 */
 [data-waline] p {
   color: var(--waline-color);
   @apply dark:text-gray-200 !important;
 }
 
-/* Waline 最近内容样式，隐藏溢出文本和设置省略号 */
 .waline-recent-content p {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -175,7 +150,6 @@ nav {
   -webkit-box-orient: vertical;
 }
 
-/* Waline 评论区表情样式，调整大小和对齐 */
 .waline-recent-content .wl-emoji {
   height: 1.1rem !important;
   display: inline-block !important;
@@ -190,24 +164,23 @@ nav {
   margin: -0.125em 0.25em;
 }
 
-/* Twikoo 评论区超链接样式 */
+/* twikoo 评论区超链接样式 */
 .tk-main a {
   @apply text-blue-700;
 }
 
-/* Twikoo 内置的 Element-UI 加载样式 */
+/* twikoo 内置的 element-ui 加载样式 */
 .el-loading-spinner {
   @apply flex justify-center items-center;
 }
 
-/* Webmention 样式，设置背景、填充和圆角 */
+/* Webmention style */
 .webmention-block {
   background: rgba(0, 116, 222, 0.2);
   padding: 1rem 2rem;
   border-radius: 5px;
 }
 
-/* Webmention 标题样式，设置字体样式和大小 */
 .webmention-header {
   font-style: italic;
   font-weight: 700;
@@ -215,37 +188,34 @@ nav {
   margin-bottom: 0.5rem;
 }
 
-/* Webmention 引用样式，设置颜色和下划线 */
 .webmention-block-intro a {
   color: #0000ee;
   text-decoration: underline;
 }
 
-/* Webmention 内容样式，设置顶部填充和边框 */
 .webmention {
   margin-top: 1rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-/* Webmention 计数样式，设置字体权重 */
 .webmention-counts {
   padding: 16px 0;
   font-weight: bold;
 }
 
-/* Webmention 计数中的数字样式，设置字体权重和右边距 */
 .webmention-counts .count {
   font-weight: bold;
   margin-right: 0.2rem;
 }
 
-/* Webmention 计数之间的分隔符样式 */
+/* .webmention-counts .counts > span {
+  margin-right: .8rem;
+} */
 .webmention-counts .counts > span:not(:last-child):after {
   content: ' • ';
 }
 
-/* 头像样式，设置宽度、高度和位置 */
 a.avatar-wrapper {
   display: inline-block;
   width: 50px;
@@ -253,25 +223,21 @@ a.avatar-wrapper {
   position: relative;
 }
 
-/* 标签容器中的头像样式，设置右边距 */
 .webmention-avatars .avatar-wrapper {
   margin-right: -8px;
 }
 
-/* 头像样式，设置圆角和边框 */
 .avatar {
   border-radius: 50%;
   margin: 0;
   border: 3px solid rgba(0, 116, 222, 0.5);
 }
 
-/* 回复列表样式，设置外边距和内边距 */
 .replies {
   margin: 0;
   padding: 0;
 }
 
-/* 单个回复样式，设置为列表项、对齐方式和内边距 */
 .reply {
   list-style: none;
   display: flex;
@@ -281,36 +247,31 @@ a.avatar-wrapper {
   margin-top: 0.6rem;
 }
 
-/* 回复中的段落样式，设置外边距为 0 */
 .reply p {
   margin: 0;
 }
 
-/* 回复中的文本样式，设置左边距和字体大小 */
 .reply .text {
   margin-left: 1rem;
   font-size: 14px;
 }
 
-/* 回复作者名称样式，设置字体权重 */
 .reply-author-name {
   font-weight: 500;
 }
 
-/* 禁止复制内容的样式 */
 .forbid-copy {
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
 
-/* 竖向书写样式，适用于从右到左的语言 */
 .writing-vertical {
   writing-mode: vertical-rl; /* 竖向排列从右向左 */
   text-orientation: upright; /* 文字方向正常 */
 }
 
-/* 在移动端调整 Chatbase 按钮的位置 */
+/* Chatbase 在移动端禁止遮挡 */
 @media (max-width: 700px) {
   button#chatbase-bubble-button {
     margin-bottom: 42px;
@@ -318,12 +279,10 @@ a.avatar-wrapper {
   }
 }
 
-/* 图片显示样式，设置为默认显示 */
 img {
   display: unset;
 }
 
-/* 广告样式，隐藏溢出内容 */
 .adsbygoogle {
   overflow: hidden;
 }

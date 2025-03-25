@@ -1,13 +1,4 @@
 {
-  // 继承自项目根目录下的 tsconfig.json 文件的配置
   "extends": "./tsconfig.json",
-
-  // 指定需要包含在 ESLint 检查范围内的文件或目录
-  "include": [
-    ".eslintrc.js",  // ESLint 配置文件
-    "**/*.ts",       // 所有 TypeScript 文件
-    "**/*.tsx",      // 所有 React TypeScript 文件
-    "**/*.js",       // 所有 JavaScript 文件
-    "**/*.jsx"       // 所有 React JavaScript 文件
-  ]
+  "include": [".eslintrc.js", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
 }

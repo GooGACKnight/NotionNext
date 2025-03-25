@@ -1,19 +1,11 @@
 {
-  // 编译器配置选项
   "compilerOptions": {
-    // 指定编译输出的目标语言版本
     "target": "es6",
-    // 指定模块代码的生成格式
     "module": "commonjs",
-    // 启用对JSX的支持
     "jsx": "react",
-    // 允许编译.js文件
     "allowJs": true,
-    // 检查.js文件中的错误
     "checkJs": true,
-    // 设置项目的基础目录
     "baseUrl": ".",
-    // 配置路径映射，简化导入语句
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["components/*"],

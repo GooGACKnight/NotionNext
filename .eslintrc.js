@@ -1,17 +1,4 @@
-/*
- * @Author: GooGACKnight kmkopenai@gmail.com
- * @Date: 2025-03-22 09:37:59
- * @LastEditors: GooGACKnight kmkopenai@gmail.com
- * @LastEditTime: 2025-03-24 23:58:25
- * @FilePath: \NotionNext\.eslintrc.js
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
 module.exports = {
-  /**
-   * 定义代码运行的环境
-   * 这里指定了代码适用于浏览器环境、支持ES2021规范的JavaScript引擎以及Node.js环境
-   * 这样的定义有助于代码检查工具理解代码的使用环境，从而更准确地进行代码分析和检查
-   */
   env: {
     browser: true,
     es2021: true,

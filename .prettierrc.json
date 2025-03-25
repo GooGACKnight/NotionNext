@@ -1,18 +1,10 @@
 {
-  // 使用单引号而非双引号
   "singleQuote": true,
-  // 不使用分号结尾
   "semi": false,
-  // 不添加尾随逗号
   "trailingComma": "none",
-  // 箭头函数参数不使用括号
   "arrowParens": "avoid",
-  // 每行打印的最大宽度为80个字符
   "printWidth": 80,
-  // 数组和对象的大括号之间添加空格
   "bracketSpacing": true,
-  // JSX使用单引号而非双引号
   "jsxSingleQuote": true,
-  // JSX的闭合括号在同一行
   "jsxBracketSameLine": true
 }

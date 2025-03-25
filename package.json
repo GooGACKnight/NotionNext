@@ -1,137 +1,76 @@
 {
-  // 项目名称
   "name": "notion-next",
-  // 版本号
   "version": "4.8.3",
-  // 项目主页
   "homepage": "https://github.com/tangly1024/NotionNext.git",
-  // 项目许可证
   "license": "MIT",
-  // 代码仓库信息
   "repository": {
     "type": "git",
     "url": "https://github.com/tangly1024/NotionNext.git"
   },
-  // 作者信息
   "author": {
     "name": "knight",
     "email": "kemingkai@gacrnd.com",
     "url": "https://knightblog-8cxze45wa-knights-projects-18252c1c.vercel.app/"
   },
-  // 脚本命令
   "scripts": {
-    // 开发模式启动命令
     "dev": "next dev",
-    // 构建命令
     "build": "next build",
-    // 启动命令
     "start": "next start",
-    // 构建完成后生成站点地图
     "post-build": "next-sitemap --config next-sitemap.config.js",
-    // 导出项目
     "export": "cross-env EXPORT=true next build && next-sitemap --config next-sitemap.config.js",
-    // 打包报告
     "bundle-report": "cross-env ANALYZE=true next build",
-    // 在开发环境中构建所有内容
     "build-all-in-dev": "cross-env VERCEL_ENV=production next build",
-    // 打印版本号
     "version": "echo $npm_package_version"
   },
-  // 项目依赖
   "dependencies": {
-    // Clerk本地化库
     "@clerk/localizations": "^3.0.4",
-    // Clerk Next.js 库
     "@clerk/nextjs": "^5.1.5",
-    // HeadlessUI React 组件库
     "@headlessui/react": "^1.7.15",
-    // Next.js 打包分析器
     "@next/bundle-analyzer": "^12.1.1",
-    // Vercel 分析库
     "@vercel/analytics": "^1.0.0",
-    // Algolia 搜索库
     "algoliasearch": "^4.18.0",
-    // HTTP 客户端库
     "axios": "^1.7.2",
-    // RSS 订阅库
     "feed": "^4.2.2",
-    // Redis 客户端库
     "ioredis": "^5.4.2",
-    // MD5 加密库
     "js-md5": "^0.7.3",
-    // 节流库
     "lodash.throttle": "^4.1.1",
-    // 内存缓存库
     "memory-cache": "^0.2.0",
-    // Next.js 框架
     "next": "14.2.4",
-    // Notion 客户端库
     "notion-client": "6.15.6",
-    // Notion 工具库
     "notion-utils": "6.15.6",
-    // React 框架
     "react": "^18.2.0",
-    // React DOM 库
     "react-dom": "^18.2.0",
-    // React Facebook 组件库
     "react-facebook": "^8.1.4",
-    // React 热键钩子库
     "react-hotkeys-hook": "^4.5.0",
-    // React Notion X 组件库
     "react-notion-x": "6.16.0",
-    // React 社交分享库
     "react-share": "^4.4.1",
-    // React Twitter 嵌入库
     "react-tweet-embed": "~2.0.0"
   },
-  // 开发依赖
   "devDependencies": {
-    // TypeScript React 类型定义
     "@types/react": "18.3.10",
-    // TypeScript ESLint 插件
     "@typescript-eslint/eslint-plugin": "^7.16.0",
-    // TypeScript ESLint 解析器
     "@typescript-eslint/parser": "^7.16.0",
-    // Waline 客户端库
     "@waline/client": "^2.5.1",
-    // CSS 自动前缀
     "autoprefixer": "^10.4.13",
-    // 环境变量设置工具
     "cross-env": "^7.0.3",
-    // ESLint 代码检查工具
     "eslint": "^8.57.1",
-    // Next.js ESLint 配置
     "eslint-config-next": "^13.1.1",
-    // Prettier ESLint 配置
     "eslint-config-prettier": "^9.1.0",
-    // ESLint 导入插件
     "eslint-plugin-import": "^2.23.0",
-    // ESLint Node 插件
     "eslint-plugin-node": "^11.1.0",
-    // ESLint Prettier 插件
     "eslint-plugin-prettier": "^5.1.3",
-    // ESLint React 插件
     "eslint-plugin-react": "^7.34.3",
-    // ESLint React Hooks 插件
     "eslint-plugin-react-hooks": "^4.6.2",
-    // Next.js 站点地图生成工具
     "next-sitemap": "^1.6.203",
-    // CSS 处理器
     "postcss": "^8.4.31",
-    // 代码格式化工具
     "prettier": "^3.3.2",
-    // Tailwind CSS 框架
     "tailwindcss": "^3.3.2",
-    // TypeScript 语言
     "typescript": "5.6.2",
-    // Webpack 打包分析器
     "webpack-bundle-analyzer": "^4.5.0"
   },
-  // 依赖版本解决策略
   "resolutions": {
     "axios": ">=0.21.1"
   },
-  // Bug 报告信息
   "bugs": {
     //"url": "https://github.com/tangly/NotionNext/issues",
     "email": "18819436727@163.com"

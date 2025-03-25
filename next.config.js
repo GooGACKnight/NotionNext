@@ -1,16 +1,7 @@
-// 引入博客配置中的主题设置
 const { THEME } = require('./blog.config')
-
-// 引入文件系统模块，用于后续的文件操作
 const fs = require('fs')
-
-// 引入路径模块，用于处理文件路径
 const path = require('path')
-
-// 引入博客配置信息
 const BLOG = require('./blog.config')
-
-// 引入工具函数，用于提取页面ID的语言前缀
 const { extractLangPrefix } = require('./lib/utils/pageId')
 
 // 打包时是否分析代码
