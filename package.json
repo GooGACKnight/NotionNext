@@ -8,9 +8,9 @@
     "url": "https://github.com/tangly1024/NotionNext.git"
   },
   "author": {
-    "name": "knight",
-    "email": "kemingkai@gacrnd.com",
-    "url": "https://knightblog-8cxze45wa-knights-projects-18252c1c.vercel.app/"
+    "name": "tangly",
+    "email": "mail@tangly1024.com",
+    "url": "http://tangly1024.com"
   },
   "scripts": {
     "dev": "next dev",
@@ -72,7 +72,7 @@
     "axios": ">=0.21.1"
   },
   "bugs": {
-    //"url": "https://github.com/tangly/NotionNext/issues",
-    "email": "18819436727@163.com"
+    "url": "https://github.com/tangly/NotionNext/issues",
+    "email": "tlyong1992@hotmail.com"
   }
 }
